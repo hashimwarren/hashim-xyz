@@ -6,29 +6,93 @@
 
   <title>Frontend Mentor | Beta sign up split layout Challenge</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
-  All your files in one secure location, accessible anywhere.
+  <section class="illustration">
+    <img src="img/illustration-main.svg" alt="Main Illustration">
+  </section>
 
-  Fylo stores all your most important files in one secure location.
-  Access them wherever you need, share and collaborate with friends,
-  family and co-workers.
 
-  Sign up for early access
+  <header>
+    <img src="img/logo.svg" alt="Fylo Logo" height="50px">
 
-  Sign Up
 
-  Privacy Policy
+    <img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Facebook Logo" class="facebook-logo">
+    <img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Twitter Logo" class="twitter-logo">
+    <img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Mail Icon" class="mail-logo">
+
+  </header>
+  <div class="signup">
+      All your files in one secure location, accessible anywhere.
+
+      Fylo stores all your most important files in one secure location.
+      Access them wherever you need, share and collaborate with friends,
+      family and co-workers.
+      <form>
+        <h3>Sign up for early access</h3>
+        <input type="email" name="email" id="email">
+        <label for="email">Sign Up</label>
+      </form>
+
+
+  </div>
+
+
+
 
   <footer>
-    <p class="attribution">
-      This page started life as a challenge on the awesome <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+    <p>
+        Privacy Policy
     </p>
   </footer>
+
 </body>
+
+<style>
+body {
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns: 4fr 3fr 1fr ;
+  grid-template-rows: 1fr 5fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+}
+
+
+
+.illustration {
+  grid-row: 1 / 4;
+  grid-column: 1 / 2;
+  height: 100%;
+  width: 100%;
+  background-color: hsl(243, 87%, 12%); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom left, hsl(243, 87%, 12%), hsl(243, 86%, 85%));
+}
+
+header {
+  grid-column: 2 / span 2;
+}
+
+.social-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons li {
+  display: inline;
+}
+.signup {
+  grid-column: 2 / span 2;
+}
+footer {
+  grid-column-end: -1;
+
+}
+
+
+</style>
 </html>
