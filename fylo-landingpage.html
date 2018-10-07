@@ -19,9 +19,9 @@
   <nav>
     <ul>
       <li><img src="img/logo.svg" alt="Fylo Logo" height="50px"></li>
-      <li><img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Facebook Logo" class="facebook-logo"></li>
-      <li><img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Twitter Logo" class="twitter-logo"></li>
-      <li><img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Mail Icon" class="mail-logo"></li>
+      <li><img src="img/facebook.svg" alt="Facebook Logo" class="facebook-logo" height="50px"></li>
+      <li><img src="img/twitter.svg" alt="Twitter Logo" class="twitter-logo" height="50px"></li>
+      <li><img src="img/email.svg" alt="Mail Icon" class="mail-logo" height="50px"></li>
     </ul>
   </nav>
 
@@ -39,7 +39,7 @@
       <form>
         <h3>Sign up for early access</h3>
         <input type="email" name="email" id="email">
-        <label for="email">Sign Up</label>
+        <label for="email" class="signup-button">Sign Up</label>
       </form>
 
 
@@ -71,12 +71,21 @@ body {
 
 
 .illustration {
+  display: flex;
   grid-row: 1 / 4;
   grid-column: 1 / 2;
   height: 100%;
   width: 100%;
   background-color: hsl(243, 87%, 12%); /* For browsers that do not support gradients */
-  background-image: linear-gradient(to bottom left, hsl(243, 87%, 12%), hsl(243, 86%, 85%));
+  background-image: linear-gradient(to bottom left,
+                  hsl(243, 87%, 12%) 10%,
+                  hsl(243, 86%, 85%) 100%);
+  background-image: linear-gradient(30deg, hsl(243, 86%, 85%) 5%, hsl(243, 87%, 12%) 90%);
+}
+
+.illustration img {
+  align-self: center; /* stops image from stretching */
+  padding: 40px;
 }
 
 nav {
@@ -106,6 +115,34 @@ nav ul li:first-child {
 .signup {
   grid-column: 2 / span 2;
 }
+
+form input {
+  display: inline-block;
+  width: 50%;
+  padding: 0 20px;
+  line-height: 4rem;
+  height: 4rem;
+  background: white;
+  border: solid 1px #e6e6e6;
+  border-bottom-width: 3px;
+  border-radius: 5px;
+  -webkit-transition: all 03s ease;
+  transition: all 0.3s ease;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.signup-button {
+    background-color: hsl(163, 95%, 43%); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 footer {
   grid-column-end: -1;
 
