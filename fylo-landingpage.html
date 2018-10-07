@@ -15,12 +15,19 @@
 
 
   <header>
-    <img src="img/logo.svg" alt="Fylo Logo" height="50px">
+
+  <nav>
+    <ul>
+      <li><img src="img/logo.svg" alt="Fylo Logo" height="50px"></li>
+      <li><img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Facebook Logo" class="facebook-logo"></li>
+      <li><img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Twitter Logo" class="twitter-logo"></li>
+      <li><img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Mail Icon" class="mail-logo"></li>
+    </ul>
+  </nav>
 
 
-    <img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Facebook Logo" class="facebook-logo">
-    <img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Twitter Logo" class="twitter-logo">
-    <img src="img/flogo-Hex-RGB-MedGrey-58.png" alt="Mail Icon" class="mail-logo">
+
+
 
   </header>
   <div class="signup">
@@ -72,19 +79,30 @@ body {
   background-image: linear-gradient(to bottom left, hsl(243, 87%, 12%), hsl(243, 86%, 85%));
 }
 
-header {
-  grid-column: 2 / span 2;
+nav {
+  grid-column: 2 /span 2; /* doesn't seem to work properly */
+  width: 100%;
 }
 
-.social-icons {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
 }
 
-.social-icons li {
+nav ul li {
   display: inline;
 }
+
+nav ul li:first-child {
+  margin-right: auto;
+
+}
+
+
 .signup {
   grid-column: 2 / span 2;
 }
