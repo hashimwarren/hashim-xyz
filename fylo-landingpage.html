@@ -21,19 +21,19 @@
 
     <nav>
       <ul>
+        <li><a href=""><i class="fa fa-lg fa-twitter"></i></a></li>
+        <li><a href=""><i class="fa fa-lg fa-facebook"></i></a></li>
+        <li><a href=""><i class="fa fa-lg fa-envelope-o"></i></a></li>
 
-      <li><img src="img/facebook.svg" alt="Facebook Logo" class="facebook-logo" height="50px"></li>
-      <li><img src="img/twitter.svg" alt="Twitter Logo" class="twitter-logo" height="50px"></li>
-      <li><img src="img/email.svg" alt="Mail Icon" class="mail-logo" height="50px"></li>
       </ul>
     </nav>
   </header>
   <div class="signup">
-      All your files in one secure location, accessible anywhere.
+      <h1>All your files in one secure </br> location, accessible anywhere.</h1>
 
-      Fylo stores all your most important files in one secure location.
-      Access them wherever you need, share and collaborate with friends,
-      family and co-workers.
+      <p>Fylo stores all your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends,
+          family and co-workers.</p>
       <form>
         <h3>Sign up for early access</h3>
         <input type="email" name="email" id="email">
@@ -55,6 +55,8 @@
 </body>
 
 <style>
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 body {
   display: grid;
   grid-gap: 100px;
@@ -113,6 +115,10 @@ nav ul li {
 
 .signup {
   grid-column: 2 / span 2;
+}
+
+.signup p {
+  color: gray;
 }
 
 form input {
