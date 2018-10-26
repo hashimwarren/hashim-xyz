@@ -34,8 +34,10 @@
       <p>Fylo stores all your most important files in one secure location.
           Access them wherever you need, share and collaborate with friends,
           family and co-workers.</p>
+
+      <h3>Sign up for early access</h3>
       <form>
-        <h3>Sign up for early access</h3>
+
         <input type="email" name="email" id="email">
         <label for="email" class="signup-button">Sign Up</label>
       </form>
@@ -121,9 +123,15 @@ nav ul li {
   color: gray;
 }
 
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
 form input {
   display: inline-block;
-  width: 50%;
+  width: 60%;
+
   padding: 0 20px;
   line-height: 4rem;
   height: 4rem;
@@ -134,7 +142,12 @@ form input {
   -webkit-transition: all 03s ease;
   transition: all 0.3s ease;
   outline: none;
-  margin-bottom: 20px;
+
+}
+
+form label {
+
+  width: 25%
 }
 
 .signup-button {
