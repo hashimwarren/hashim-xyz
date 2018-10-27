@@ -59,6 +59,13 @@
 <style>
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   display: grid;
   grid-gap: 100px;
@@ -94,9 +101,10 @@ header {
   display: flex;
   justify-content: space-between;
   grid-column: span 2;
-  padding: 10vh 100px 5px 5px;
+  padding: 10vh 0;
   width: 100%;
 }
+
 
 
 nav ul {
@@ -130,24 +138,25 @@ form {
 
 form input {
   display: inline-block;
-  width: 60%;
+  width: 70%;
 
   padding: 0 20px;
   line-height: 4rem;
   height: 4rem;
   background: white;
-  border: solid 1px #e6e6e6;
+  border: solid 0px transparent;
   border-bottom-width: 3px;
   border-radius: 5px;
-  -webkit-transition: all 03s ease;
-  transition: all 0.3s ease;
-  outline: none;
+  box-shadow: 0 10px 6px -6px #777;
 
 }
 
+
+
 form label {
 
-  width: 25%
+  width: 30%;
+
 }
 
 .signup-button {
@@ -159,6 +168,8 @@ form label {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    box-shadow: 0 10px 6px -6px #777;
+
 }
 
 footer {
