@@ -1,0 +1,44 @@
+section {
+    display: grid;
+    grid-template-columns: minmax(1fr 500px);
+    grid-template-rows: 1fr 1fr 1fr 2fr 1fr 5fr;
+    padding: 20px 200px 0 100px;
+  }
+
+  ul {
+    width: 400px;
+
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    background-color: lightblue;
+  }
+
+  li span {
+    flex-grow: 2;
+
+    padding: 20px;
+  }
+
+  button {
+    flex-grow: 1
+    width: 50%;
+  }
+
+  .finished {
+    background-color: lightgray;
+    text-decoration: line-through;
+    font-weight: bold;
+
+  }
+
+  .editbackground {
+    background-color: lightgray;
+    border: 3px solid gray;
+  }
+
+  .hide {
+    visibility: hidden;
+  }
