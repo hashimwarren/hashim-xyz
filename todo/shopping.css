@@ -1,13 +1,13 @@
 section {
     display: grid;
-    grid-template-columns: minmax(1fr 500px);
+   /* grid-template-columns: minmax(1fr 500px); */
     grid-template-rows: 1fr 1fr 1fr 2fr 1fr 5fr;
     padding: 20px 200px 0 100px;
     height: 100vh;
   }
 
   ul {
-    width: 400px;
+    width: 100% ;
 
   }
 
@@ -43,3 +43,19 @@ section {
   .hide {
     visibility: hidden;
   }
+
+  /* Prevent line breaks in editable tasks */
+
+[contenteditable="true"] {
+    white-space: nowrap;
+    width:200px;
+    overflow: hidden;
+}
+[contenteditable="true"] br {
+    display:none;
+
+}
+[contenteditable="true"] * {
+    display:inline;
+    white-space:nowrap;
+}

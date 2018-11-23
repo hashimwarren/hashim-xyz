@@ -34,6 +34,9 @@ function editToDo(elementToEdit) {
   e.focus() //focus cursor on newly editable field
   elementToEdit.innerHTML = "Save" //change edit button to save
   elementToEdit.setAttribute("onclick", "stopEditing(this)")
+  
+
+
 
 
 
@@ -47,7 +50,8 @@ function stopEditing(editedElement) {
   editedElement.innerHTML = "Edit"
   editedElement.setAttribute("onclick", "editToDo(this)")
 
-}
 
+
+}
 
 
