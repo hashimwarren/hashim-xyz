@@ -6,9 +6,9 @@ let dispayUTMTerm = document.getElementById('utm_term')
 let dispayUTMContent = document.getElementById('utm_content')
 let siteURL = document.URL
 
+const a = document.createElement('a')
 
-// Show URL on the page
-// displayURL.textContent += siteURL
+
 
 
 // Parse the URL
