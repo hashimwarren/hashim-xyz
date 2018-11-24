@@ -14,8 +14,6 @@ let siteURL = document.URL
 // Parse the URL
 // reference - https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
 
-const a = document.createElement('a')
-
 a.href = siteURL
 
 let params = new URLSearchParams(a.search)
