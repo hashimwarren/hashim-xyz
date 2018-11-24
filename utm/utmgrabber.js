@@ -27,8 +27,16 @@ let utm_term = params.get('utm_term')
 let utm_content = params.get('utm_content')
 
 
-dispayUTMSource.innerHTML = utm_source
+
+dispayUTMSource.innerHTML = objectUTM.utm_source
 dispayUTMMedium.innerHTML = utm_medium
 dispayUTMCampaign.innerHTML = utm_campaign
 dispayUTMTerm.innerHTML = utm_term
 dispayUTMContent.innerHTML = utm_content
+
+// create empty object. Then fill object with key/value pairs of the URL's parameters
+const objectUTM = {}
+
+for (let param of params) {
+    objectUTM[param[0]] = param[1]
+}
