@@ -5,7 +5,6 @@ let dispayUTMCampaign = document.getElementById('utm_campaign')
 let dispayUTMTerm = document.getElementById('utm_term')
 let dispayUTMContent = document.getElementById('utm_content')
 let siteURL = document.URL
-//let siteURL = "https://hashim.xyz/utm?utm_source=google&utm_medium=banner&utm_campaign=wordpress-plugin&utm_term=new-buyer&utm_content=yellow-treatment"
 
 
 // Show URL on the page
