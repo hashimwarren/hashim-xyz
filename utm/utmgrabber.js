@@ -14,6 +14,19 @@ function arrayURLtoObject() {
 }
 
 objectURL = arrayURLtoObject()
-console.log(objectURL)
+
+// Add url parameters to local storage
+storedURLParameters = localStorage.getItem('urlParameters')
+
+if (!storedURLParameters) { //if there are no stored url parameters, run this code
+    localStorage.setItem(
+        'urlParameters',
+        JSON.stringify(objectURL) //convert the object into a string
+    )
+}
+
+
+
+
 
 
