@@ -4,9 +4,11 @@
 function arrayURLtoObject() {
     let params = (new URL(document.location)).searchParams
     let e = {}
-
-    for (let param of params) {
-        e[param[0]] = param[1]
+    if (Object.keys(e).length === 0 && e.constructor === Object) {
+        for (let param of params) {
+            e[param[0]] = param[1]
+            
+        }
 
     }
     return e
