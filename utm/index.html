@@ -20,8 +20,10 @@
         </header>
 
         <section>
-            <form id="ourForm">
-            <input id="ourField" type="text" autocomplete="off">
+            <form id="ourForm" data-netlify="true">
+            <input id="ourField" type="email" autocomplete="on">
+            <input type="hidden" name="one" value="two">
+
             <button>Create</button>
             </form>
         </section>
