@@ -7,7 +7,7 @@ function arrayURLtoObject() {
     if (Object.keys(e).length === 0 && e.constructor === Object) {
         for (let param of params) {
             e[param[0]] = param[1]
-            
+
         }
 
     }
@@ -27,8 +27,20 @@ if (!storedURLParameters) { //if there are no stored url parameters, run this co
     )
 }
 
+localData = JSON.parse(localStorage.getItem('urlParameters'))
 
+console.log(localData)
 
+//initiate FormData object
+const submittedData = new FormData()
+
+//Object.entries() method returns an array,
+//forEach iterates over it,
+//FormData.append inserts the key, value pairs
+Object.entries(localData).forEach(([key, value]) =>  submittedData.append(key, value))
+
+console.log(submittedData.getAll("utm_source"))
+console.log(submittedData.getAll("utm_medium"))
 
 
 
