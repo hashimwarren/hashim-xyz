@@ -1,0 +1,73 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: ariel, times new roman, helvetica;
+    line-height: 1.7em;
+    background-color: #D7EEF9;
+
+  }
+
+  .services{
+    background: url('https://emerginggrowth.com/wp-content/uploads/2018/05/BUsiness-001.jpg');
+    background-size: cover;
+    border: white 4px solid;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+  }
+
+  .services:hover{
+    cursor: pointer;
+  }
+
+  .services h2{
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+
+  .contact{
+    background: url('http://integumetrix.com/wp-content/uploads/2017/12/contact-us1_orig.jpg');
+    background-position-x: 15px;
+    background-position-y: 10px;
+    background-size: cover;
+    border: #6FCAF8 4px solid;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 100px;
+    left: 400px;
+  }
+
+  .contact h2{
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+
+  .blog{
+    background: url('https://eventgarde.com/media/files/blog/bigstock-Blog-Blogging-Media-Messaging-99027986.jpg');
+    background-position-x: -28px;
+    background-size: cover;
+    border: white 4px solid;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 200px;
+    left: 600px;
+  }
+
+
+
+
