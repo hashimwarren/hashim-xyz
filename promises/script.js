@@ -8,3 +8,25 @@ function loadInHead(x) {
     document.head.append(x);
   }
 
+function ownFetch(url) {
+  return new Promise(function (resolve, reject) {
+    let req = new XMLHttpRequest();
+
+    req.open(url);
+    req.send()
+
+    req.onload = function() {
+      resolve(req)
+    }
+
+    req.onerror = function() {
+      reject()
+    }
+
+  })
+}
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then()
+
+
