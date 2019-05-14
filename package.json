@@ -1,5 +1,8 @@
 {
     "scripts": {
         "build": "netlify-lambda build functions"
-      }
-  }
+    },
+    "dependencies": {
+        "dotenv": "^7.0.0"
+    }
+}
