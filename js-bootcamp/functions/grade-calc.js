@@ -5,8 +5,9 @@
 // let studentScore = 90
 // let totalPossibleScore = 100
 
-let gradeMessage = function (studentScore, totalPossibleScore, letterGrade = 'F') {
-    let percentGrade = (studentScore / totalPossibleScore) * 100
+const gradeMessage = function (studentScore, totalPossibleScore, letterGrade = 'F') {
+    const percentGrade = (studentScore / totalPossibleScore) * 100
+    let letterGrade = ''
     if (percentGrade <= 100 && percentGrade >= 90) {
          letterGrade = 'A'
     } else if (percentGrade <= 89 && percentGrade >= 80) {
