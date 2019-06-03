@@ -1,30 +1,31 @@
-//create an array with 5 todos
-//you have x todos
-//print the first and second to last items
+let todos = [{
+    title:'Buy milk', completed: false}, {title:'pay bills', completed: false}, {title:'wash clothes', completed: true}, {title:'get gas', completed: false}, {title: 'make dinner', completed: true}]
 
-let todos = ['Buy milk', 'pay bills', 'wash clothes', 'get gas', 'make dinner']
+// 1. convert array of strings to objects -> text, completed (true / false)
+// 2. remove a todo by text value (case insensititve)
 
-console.log(`You have ${todos.length} todos. Your first todo is "${todos[0]}". Your second last todo is "${todos[todos.length - 2]}"`)
+const deleteTodo = function (todos, title) {
+    const index = todos.findIndex(function (todo, index) {
+        return todo.title.toLowerCase() === title.toLowerCase()
+    })
+    if (index > - 1) {
+        todos.splice(index, 1)
+    }
+}
 
-// delete the third item
-// add a new item onto the end
-// remove the first item from the list
+//still working on it...
+const getThingsToDo = function (todos) {
+    return todos.filter(function (todo) {
+        return todo.completed === false
+    })
 
-console.log(todos.splice(2, 1))
-console.log(todos)
-todos.push('Learn to code')
-console.log(todos)
-console.log(todos.shift())
-console.log(todos)
-
-// use forEach array method
-// print
-//     1. The First Item
-//     2. The Second Item
-
-todos.forEach(function (item, index) {
-    console.log(`${index +1}. ${item}`)
+}
 
 
-});
+console.log(getThingsToDo(todos))
+
+// console.log(todos)
+// deleteTodo(todos, 'Pay bills')
+// console.log(todos)
+
 
