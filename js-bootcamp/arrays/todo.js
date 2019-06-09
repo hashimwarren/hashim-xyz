@@ -1,8 +1,19 @@
 let todos = [{
-    title:'Buy milk', completed: false}, {title:'pay bills', completed: false}, {title:'wash clothes', completed: true}, {title:'get gas', completed: false}, {title: 'make dinner', completed: true}]
+    title:'Buy milk', completed: true}, {title:'pay bills', completed: false}, {title:'wash clothes', completed: true}, {title:'get gas', completed: false}, {title: 'make dinner', completed: true}]
 
-// 1. convert array of strings to objects -> text, completed (true / false)
-// 2. remove a todo by text value (case insensititve)
+
+const sortTodos = function (todos) {
+    todos.sort(function (a, b) {
+        if (a.completed === false) {
+            return -1
+        } else if (a.completed === true) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
+
 
 const deleteTodo = function (todos, title) {
     const index = todos.findIndex(function (todo, index) {
@@ -13,7 +24,7 @@ const deleteTodo = function (todos, title) {
     }
 }
 
-//still working on it...
+
 const getThingsToDo = function (todos) {
     return todos.filter(function (todo) {
         return todo.completed === false
@@ -21,8 +32,11 @@ const getThingsToDo = function (todos) {
 
 }
 
+console.log(todos)
+sortTodos(todos)
+console.log(todos)
 
-console.log(getThingsToDo(todos))
+// console.log(getThingsToDo(todos))
 
 // console.log(todos)
 // deleteTodo(todos, 'Pay bills')

@@ -1,5 +1,5 @@
 const notes = [{
-    title: 'My next trip',
+    title: 'my next trip',
     body: 'I would like to go to spain'
 
 }, {
@@ -25,6 +25,20 @@ const findNote = function (notes, noteTitle) {
 //     return notes[index]
 // }
 
+
+const sortNotes = function (notes) {
+    notes.sort(function (a, b) {
+        if (a.title.toLowerCase() < b.title.toLowerCase()) {
+            return -1
+        } else if (b.title.toLowerCase() < a.title.toLowerCase()) {
+            return 1
+        } else {
+            return 0 // note is the same
+        }
+
+    })
+}
+
 const findNotes = function (notes, query) {
     return notes.filter(function (note, index) {
         const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
@@ -33,11 +47,13 @@ const findNotes = function (notes, query) {
     })
 }
 
+console.log(notes)
+sortNotes(notes)
+console.log(notes)
 
+// console.log(findNotes(notes, 'spain'))
 
-console.log(findNotes(notes, 'spain'))
-
-const note = findNote(notes, 'Office modification')
+// const note = findNote(notes, 'Office modification')
 
 //console.log(note)
 
