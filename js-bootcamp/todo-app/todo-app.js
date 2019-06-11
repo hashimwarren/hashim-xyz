@@ -40,6 +40,6 @@ todos.forEach(function (todo) {
 
 //add click event listener
 
-document.querySelector('button').addEventListener('click', function (e) {
+document.querySelector('#add-todo').addEventListener('click', function (e) {
     console.log(`The ${e.target} was clicked`)
 })
