@@ -15,6 +15,13 @@ let todos = [{
     completed: true
 }]
 
+// add todo input
+
+document.querySelector('#new-todo-text').addEventListener('input', function (e) {
+    
+    console.log(e.target.value)
+})
+
 
 // Challenge
 //summary in <p> - you have x todos left
@@ -43,3 +50,5 @@ todos.forEach(function (todo) {
 document.querySelector('#add-todo').addEventListener('click', function (e) {
     console.log(`The ${e.target} was clicked`)
 })
+
+
