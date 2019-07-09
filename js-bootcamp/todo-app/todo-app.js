@@ -15,19 +15,21 @@ let todos = [{
     completed: true
 }]
 
+// ✔ 1. Setup a div contain for todos
+// 2. Setup filters (searchText) and ✔ wire up a new filter input to change it
+// 3. Create a renderTodos function to render and rerender the lastest filtered data
+
+
+
 // add todo input
 
 document.querySelector('#new-todo-text').addEventListener('input', function (e) {
-    
+
     console.log(e.target.value)
 })
 
 
-// Challenge
-//summary in <p> - you have x todos left
-//add a p for each todo
 
-//filter array for completed:false, then count that array.length
 
 notCompleted = todos.filter(function (todo) {
     return !todo.completed
